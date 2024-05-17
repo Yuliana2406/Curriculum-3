@@ -6,42 +6,50 @@
     <title>aprendiendo JS</title>
 </head>
 <body onload="load_page()">
+<div>
+    <input type="text" id="hour_system">
+        <input type="text" id="name_search" size="30"disabled>
+        <button onclick="search()">BUSCAR</button>
+    <br><br>
     <div>
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" id="Name" autocomplete="off">
-        </div>
-        <div>
-            <label for="last_name"> lastname:</label>
-            <input type="text" id="last_name" placeholder="ingrese su apellido">
-        </div>
-        <div>
-            <button id="send" onclick="send_form()">ENVIAR</button>
-        </div>
-        <div id="print"></div>
-        <div id="text"></div>
-        <div><button ondblclick="action()">CALCULAR</button></div>
-        <div id="result"></div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" autocomplete="off">
     </div>
-        
     <div>
-        <button onclick="agregar()">AGREGAR</button>
-        <input type="text" id="num" size="1" placeholder="num">
-        <button onclick="eliminar()">ELIMINAR ULT</button>
-        <button onclick="eliminar()">ELIMINAR PRIM</button>
-        <button onclick="eliminar()">AGREGAR PRIM</button>
-        <button onclick="eliminar()">LIMPIAR </button>
-
-
-
+        <label for="last_name"> lastname:</label>
+        <input type="text" id="last_name" placeholder="ingrese su apellido">
     </div>
-    <div></div>
+    <div>
+        <label for="pass_one">Ingrese contraseña</label>
+        <input type="password" id="pass_one" placeholder="Ingrese contraseña">
+    </div>
+    <div>
+        <label for="pass_two">repita contraseña</label>
+        <input type="password" id="pass_two" placeholder="repita contraseña">
+    </div>
+    <div>
+        <button id="send" onclick="send_form()">ENVIAR</button>
+    </div>
+    <div id="print"></div>
+</div>
+<br><br>
+    <div id="text"></div>
+    <div><button ondblclick="action()">CALCULAR</button></div>
+    <div id="result"></div>
+</div>
+<div>       
+    <button onclick="agregar()">AÑADIR</button>
+    <input type="text" id="num" size="1" placeholder="Num">
+    <button onclick="eliminar()"> ELIMINAR </button>
+    <button onclick="eliminar_prim()">ELIMINAR PRIM</button>
+    <button onclick="añadir_prim()">AÑADIR PRIM</button>
+    <button onclick="reves()"> IMP REVES</button>
+    <button onclick="eliminar()">LIMPIAR </button>
+
+</div>
+<div><input type="text" id="impresion" disabled></div>
 
     
-
-
-
-
     <!--script>
         alert("HOLA MUNDO");
     </script-->
