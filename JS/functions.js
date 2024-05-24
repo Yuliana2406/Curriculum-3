@@ -40,6 +40,7 @@ function load_page() {
         showConfirmButton: false,
         timer: 2000
       });
+
       document.getElementById("text").innerText="el array calcular es:" + array_num;
       document.getElementById("impresion").value = array_num;
       document.getElementById("name_search").value = nombre_form;
@@ -47,7 +48,7 @@ function load_page() {
       let hour_system = new date ();
       let dia = hour_system.getDay();
       console.log(hour_system.getDate());
-      console.log(hour_system.getDaty());
+      console.log( " dia " + hour_system.getDaty());
       console.log(hour_system.getfullYear());
       console.log(hour_system.getHours());
       console.log(hour_system.getMilliseconds());
@@ -64,14 +65,15 @@ function load_page() {
       console.log("hoy es:  " + dias[dia]);
       let dia_mes = hour_system.getMonth() + 1;
       console.log(hour_system.getDate()+"/"+dia_mes+"/"+hour_system.getfullYear());
+
       document.getElementById("hour_system").value = hour_system;
-}
+} 
 
 function send_form(){
-    let name       =document.getElementById("name").value;
-    let last_name  =document.getElementById("last_name").value;
-    let pass_one   =document.getElementById("past_one").value;
-    let pass_two   =document.getElementById("pass_two").value;
+    let name       = document.getElementById("name").value;
+    let last_name  = document.getElementById("last_name").value;
+    let pass_one   = document.getElementById("past_one").value;
+    let pass_two   = document.getElementById("pass_two").value;
     if(name.length == 0 || last_name.length == 0|| pass_one.length == 0 || pass_two .length == 0){
         Swal.fire({
             title: "Cajas de texto vacias",
@@ -91,7 +93,7 @@ function send_form(){
     //         document.getElementById("last_name").style.border = "2px solid green"
     //         }   
     // }
-       } else if (pass_one != pass_two){
+    } else if (pass_one != pass_two){
        Swal.fire({
            title: "sus contraseñas no son iguales",
            text: "por favor valide sus credenciales",
@@ -100,7 +102,7 @@ function send_form(){
     }
     else{
        document.getElementById("print").innerText ="su nombre es: " +name+" "+ last_name;
-       console.log (Number)
+      
     }
 }
 
@@ -117,7 +119,7 @@ var array_multi =[
 
 ]
 
-var json_ajn = {
+var json_ejm = {
     name: "yuliana",
     last_name: "velasquez",
     phone: "3209428064",
@@ -128,7 +130,7 @@ console.log(array_semana);
 console.log(array_gral);
 console.log(array_num);
 console.log(array_multi);
-console.log(array_ajn);
+console.log(array_ejm);
 
 function action(){
     //swal.fire(array_num);
@@ -137,7 +139,6 @@ function action(){
     //console.log(array_num.length);
     var result =0;
     for(let i=0;i<array_num.length;i++){
-        console.log(array_multi[j].age);
         result = result+array_num[i]
     }
     document.getElementById("result").innerHTML = "<strong>EL resultado es:"+result+"</strong"
@@ -159,22 +160,28 @@ function action(){
     alert(total_dos);
 
 }
+
 var array_numerico =[1,2,3,4,5,6,7,8,9];
 
 function eliminar(){
-    let array_delete = array_numerico.pop("num");
+    let array_delete = array_numerico.pop();
     console.log(array_delete);
     console.log(array_numerico);
     document.getElementById("impresion").value = array_numerico;
                                                                              
 }
 
-function añadir(){
-    let num= document.getElementById("num").value;
-    let array_add = array_numerico.push(num);
-    console.log(array_add);
-    console.log(array_numerico);
-    document.getElementById("impresion").value = array_numerico;
+function agregar(){
+    let num = document.getElementById("num").value;
+    if(isNaN(num) == true){
+        Swal.fire("Solo se aceptan números");
+    }
+    else{
+        let array_add = array_numerico.push(num);
+        console.log(array_add);
+        console.log(array_numerico);
+        document.getElementById("impresion").value = array_numerico;
+    }
 }
 
 function reves(){
@@ -182,55 +189,33 @@ function reves(){
 
 }
 
-function eliminar_prim(){
-    let array_delete = array_numerico.shift();
-    console.log(array_delete);
-    console.log(array_numerico);
-    document.getElementById("impresion").value=array_numerico;
-    
-}
-function añadir(){
-    let num = document.getElementById("num").value
-    let array_add = array_numerico.push(num);
-    console.log(array_add);
-    console.log(array_numerico);
-    document.getElementById("impresion").value=array_numerico;
-
-}
-function añadir_prim(){
-    let num = document.getElementById("num").value
-    let array_add = array_numerico.unshift(num);
-    console.log(array_add);
-    console.log(array_numerico);
-    document.getElementById("impresion").value=array_numerico;
-
-}
 function limpiar(){
     document.getElementById("num").value = "";
     document.getElementById("name").value = "";
     document.getElementById("last_name").value = "";
     document.getElementById("result").innerText = "";
-
-
 }
 
-var nombre_form = "YULIANA VELASQUEZ GOMEZ";
+var nombre_form = "Yiceth Yuliana Velasquez Gomez";
+
 
 function search(){
     let nombre_buscar = document.getElementById("name_search").value;
-    //Swal.fire(nombre_buscar.tolowerCase())};//toUpperCase()mayus
-    //Swal.fire({
-        //title: nombre_buscar.tolowerCase
-        //text: "Alguna de las cajas de texto esta vacia",
-        //icon: "error"
-    //});
-    //swal.fire(nombre_buscar.charAt)(0);
+    //Swal.fire(nombre_buscar.toLowerCase()); // toUpperCase() Mayus
+    // Swal.fire({
+    //     title: nombre_buscar.toLowerCase(),
+    //     text: "Alguna de las cajas de texto se encuentra vacía",
+    //     icon: "error"
+    // });
+    // Swal.fire(nombre_buscar.charAt(0));
+    // let word = nombre_buscar.indexOf('e');
+    // let word = nombre_buscar.lastIndexOf('e');
+    // let word = nombre_buscar.substring(5,15);
     let word = nombre_buscar.split("");
-    swal.fire (word+"");
-    console.log (word);
-    let word_com = word.join ("");
-    console.log 
-
+    Swal.fire(word+"");
+    console.log(word);
+    let word_com = word.join("");
+    console.log(word_com);
 }
 
 
