@@ -7,10 +7,6 @@
     box-sizing: border-box;
 }   
 
-span {
-    color: #ef233c;
-}
-
 body {
     font-family: "Roboto", sans-serif;
 }
@@ -26,13 +22,13 @@ h1 {
     overflow: hidden;
 }
 
+/* ####### MENÚ DE NAVEGACION ####### */
+
 header::before {
     content: "";
     display: block;
     margin-bottom: 80px;
 }
-
-/* ####### MENÚ DE NAVEGACION ####### */
 
 nav {
     width: 100%;
@@ -88,6 +84,7 @@ nav {
     font-size: 25px;
     line-height: 80px;
 }
+
 .titulospro {
     text-align: left;
     margin: 20px 0;
@@ -146,8 +143,6 @@ nav {
     font-size: 16px;
     border-radius: 5px;
     box-shadow: 0 8px 32px rgba(97,31,31,0.46);
-    transform: scale(0.9);
-    transition: all ease-in-out .6s;
 
 }
 
