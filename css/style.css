@@ -98,6 +98,7 @@ nav {
     align-items: center;
     text-align: center;
     margin: 0 auto;
+    transition: all ease-in-out .6s;
 }
 
 .contenido-header > img {
@@ -183,7 +184,7 @@ nav {
 }
 
 .articulo:hover {
-    box-shadow: 0 4px 10px rgba(17, 29, 48, .26);
+    box-shadow: 014px 10px rgba(17, 29, 48, .26);
     color: #fff;
     background-color: #d03d3d;
     transition: .5;
@@ -296,7 +297,7 @@ nav {
 
 /* ################################## CERTIFICADOS ################################## */
 .certificados {
-    background: #f2f2f2;
+    background: #d03d3d;
     /* padding: 0 100px; */
 }
 
