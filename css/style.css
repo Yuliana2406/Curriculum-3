@@ -67,6 +67,10 @@ nav {
     transition: all ease-in-out .6s;
 }
 
+.enlaces-header.open {
+    clip-path: circle(150% at 0 0);
+}
+
 .nav .enlaces-header a {
     color: #ef233c;
     text-decoration: none;
@@ -191,6 +195,7 @@ nav {
     width: 30%;
     background-color: #fff;
     margin-top: 50px;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.1);
     border-radius: 10px;
     padding: 45px 30px 60px 30px;
     transition: all ease-in-out .5s;
